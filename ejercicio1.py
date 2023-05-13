@@ -1,7 +1,11 @@
 def convertir(str):
     """ingresa una cedula y retorna la fecha de nacimiento"""
-    anio=23
+    anio=2023
     r= int (str[8:10])
+    if r <= 23:
+        r +=2000
+    else:
+        r+=1900
     return anio-r
 
 cedula=input("Ingrese la cedula: ")
